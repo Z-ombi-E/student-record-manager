@@ -6,6 +6,7 @@ public class Main {
         addStudent("Alice");
         addStudent("Bob");
         viewStudents();
+        deleteStudent("Alice");
     }
 
     static void addStudent(String name) {
@@ -18,6 +19,11 @@ public class Main {
         for (String name : students) {
             System.out.println(name);
         }
+    }
+
+    static void deleteStudent(String name) {
+        students.remove(name);
+        System.out.println(name + " removed.");
     }
     
 }
